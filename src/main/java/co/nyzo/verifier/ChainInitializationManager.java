@@ -128,7 +128,7 @@ public class ChainInitializationManager {
 
             // Sleep to allow the request to return.
             try {
-                Thread.sleep(1000L);
+                Thread.sleep(5000L);
             } catch (Exception ignored) { }
 
             // Check if we have all the information we need. If not, sleep before the next iteration.
@@ -136,7 +136,7 @@ public class ChainInitializationManager {
             missingBalanceList = requireBalanceList && initialBalanceList.isEmpty();
             if ((missingBlocks || missingBalanceList) && !UpdateUtil.shouldTerminate()) {
                 try {
-                    Thread.sleep(1000L);
+                    Thread.sleep(5000L);
                 } catch (Exception ignored) {
                 }
             }
